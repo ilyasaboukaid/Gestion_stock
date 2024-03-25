@@ -1,0 +1,15 @@
+/dist/
+
+.classpath
+.project
+.settings/
+
+
+bin/
+
+
+.idea/
+
+*.bak
+*.swp
+*~
