@@ -23,9 +23,7 @@ public class Registration1 extends javax.swing.JFrame {
     }
     
  private void switchToLogin() {
-    // Code pour rediriger vers l'écran de connexion (Login)
-    // Par exemple :
-    GestionDeUtilisateur loginScreen = new GestionDeUtilisateur();
+    Login loginScreen = new Login();
     loginScreen.setVisible(true);
     this.dispose(); // Fermer l'écran actuel d'inscription (Registration1)
 }
@@ -66,6 +64,7 @@ public class Registration1 extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(69, 255, 208));
         jButton1.setText("Submit");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -76,6 +75,7 @@ public class Registration1 extends javax.swing.JFrame {
         jTextField8.setForeground(new java.awt.Color(0, 102, 255));
         jTextField8.setText("Login");
         jTextField8.setBorder(null);
+        jTextField8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTextField8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField8MouseClicked(evt);
@@ -160,7 +160,7 @@ public class Registration1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameActionPerformed
-        // TODO add your handling code here:
+        switchToLogin();
     }//GEN-LAST:event_fNameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -171,6 +171,7 @@ public class Registration1 extends javax.swing.JFrame {
         String userPassword = password.getText();
         
         userModel.registerUser(firstName, lastName, userEmail, userPassword); 
+        switchToLogin();
 
         
         
